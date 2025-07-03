@@ -1,4 +1,5 @@
 // Formatly Modern Modal Editor
+// Editor @kenyoste
 (function(){
   var formatlyModal, formatlyEditor, formatlyToolbar, formatlySaveBtn, formatlyCancelBtn, formatlyOverlay;
   var onSaveCallback = function(){};
