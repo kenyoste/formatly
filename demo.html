@@ -1,64 +1,22 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>Formatly CDN Demo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formatly Modern Demo</title>
-  <link rel="stylesheet" href="formatly.css">
-  <style>body{font-family:sans-serif;background:#f6f7fa;margin:0;padding:0;}</style>
-</head>
-<body style="overflow: hidden;"> 
-  <div style="max-width:600px;margin:40px auto 0 auto;padding:0 12px;">
-    <h1 style="font-weight:700;font-size:2.1rem;letter-spacing:-1px;">Formatly Modern Demo</h1>
-    <p>Modern, soft ve tamamen vanilla JS/CSS ile hazırlanmış modal rich text editor.<br>
-    <b>Butona tıklayın:</b></p>
-    <button id="open-formatly" style="background:#2563eb;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:1.1rem;box-shadow:0 2px 8px rgba(37,99,235,0.08);cursor:pointer;transition:background 0.18s;">Editörü Aç</button>
-    <div id="sonuc" style="margin-top:36px;"></div>
-  </div>
-  <h2>Formatly Demo</h2>
-  <input id="formatly" type="text" placeholder="Formatly input örneği">
-  <br><br>
-  <textarea id="formatly" placeholder="Formatly textarea örneği"></textarea>
-  <br><br>
-  <div id="formatly" style="width:400px; min-height:40px; border:1px solid #ccc; padding:8px; margin-bottom:16px;" contenteditable="true">Formatly contenteditable div örneği</div>
-  <br><br>
-  <input type="text" placeholder="Normal input (formatly yok)">
-  <div style="display:flex; align-items:center; gap:12px; margin-bottom: 28px;">
-    <label for="ecoViewSwitch" style="font-weight:600; font-size:17px;">Dark Mode</label>
-    <label class="switch">
-      <input type="checkbox" id="ecoViewSwitch">
-      <span class="slider"></span>
-    </label>
-  </div>
-  <script src="formatly.js"></script>
-  <script>
-    Formatly.init({
-      trigger: "#open-formatly",
-      onSave: function(html) {
-        document.getElementById('sonuc').innerHTML =
-          '<h3>Düzenlenen HTML:</h3><div style="border:1px solid #e5e7eb;padding:16px;background:#fff;border-radius:8px;">'+html+'</div>';
-      }
-    });
-    const ecoSwitch = document.getElementById('ecoViewSwitch');
-    ecoSwitch.addEventListener('change', function() {
-      if(this.checked) {
-        document.documentElement.classList.add('dark');
-        document.body.style.background = '#1e293b';
-      } else {
-        document.documentElement.classList.remove('dark');
-        document.body.style.background = '#eaf1fb';
-      }
-    });
-    // Varsayılan açık mod arka planı
-    document.body.style.background = '#eaf1fb';
-  </script>
   <style>
     body {
       font-family: 'Inter', Arial, sans-serif;
+      background: #f6f7fa;
       margin: 0;
       padding: 0;
       min-height: 100vh;
       transition: background 0.3s;
+    }
+    .container {
+      max-width: 600px;
+      margin: 40px auto 0 auto;
+      padding: 0 12px;
     }
     input#formatly, textarea#formatly, div#formatly[contenteditable] {
       width: 400px;
@@ -73,25 +31,32 @@
       box-shadow: 0 2px 8px rgba(37,99,235,0.06);
       transition: background 0.2s, color 0.2s, border 0.2s;
       outline: none;
+      display: block;
     }
     input#formatly:focus, textarea#formatly:focus, div#formatly[contenteditable]:focus {
       border-color: #2563eb;
       background: #f3f6fd;
       box-shadow: 0 4px 16px rgba(37,99,235,0.10);
     }
-    /* Karanlık mod stilleri */
-    html.dark input#formatly, html.dark textarea#formatly, html.dark div#formatly[contenteditable],
-    body.dark input#formatly, body.dark textarea#formatly, body.dark div#formatly[contenteditable] {
+    html.dark body {
+      background: #1e293b;
+    }
+    html.dark input#formatly, html.dark textarea#formatly, html.dark div#formatly[contenteditable] {
       background: #23283a;
       color: #f3f6fd;
       border-color: #334155;
       box-shadow: 0 2px 8px rgba(30,41,59,0.18);
     }
-    html.dark input#formatly:focus, html.dark textarea#formatly:focus, html.dark div#formatly[contenteditable]:focus,
-    body.dark input#formatly:focus, body.dark textarea#formatly:focus, body.dark div#formatly[contenteditable]:focus {
+    html.dark input#formatly:focus, html.dark textarea#formatly:focus, html.dark div#formatly[contenteditable]:focus {
       border-color: #7ba7ff;
       background: #181c24;
       box-shadow: 0 4px 16px rgba(37,99,235,0.18);
+    }
+    .toggle-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 28px;
     }
     .switch {
       position: relative;
@@ -128,5 +93,32 @@
       background: #eaf1fb;
     }
   </style>
+</head>
+<body>
+  <div class="container">
+    <div class="toggle-row">
+      <label for="ecoViewSwitch" style="font-weight:600; font-size:17px;">Dark Mode</label>
+      <label class="switch">
+        <input type="checkbox" id="ecoViewSwitch">
+        <span class="slider"></span>
+      </label>
+    </div>
+    <h2>Formatly CDN Demo</h2>
+    <input id="formatly" type="text" placeholder="Formatly input example">
+    <textarea id="formatly" placeholder="Formatly textarea example"></textarea>
+    <div id="formatly" contenteditable="true" style="width:400px;">Formatly contenteditable div example</div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/gh/kenyoste/formatly@557cc56/formatly.js"></script>
+
+  <script>
+    const ecoSwitch = document.getElementById('ecoViewSwitch');
+    ecoSwitch.addEventListener('change', function() {
+      if(this.checked) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    });
+  </script>
 </body>
-</html> 
+</html>
