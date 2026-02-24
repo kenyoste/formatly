@@ -1125,13 +1125,13 @@ body.dark .formatly-toolbar-inline button:hover,
 html.dark .formatly-toolbar-inline .formatly-adv-btn,
 body.dark .formatly-toolbar-inline .formatly-adv-btn,
 [data-theme="dark"] .formatly-toolbar-inline .formatly-adv-btn {
-  background: #374151;
+  background: #374151 !important;
   color: #60a5fa;
 }
 html.dark .formatly-toolbar-inline .formatly-adv-btn:hover,
 body.dark .formatly-toolbar-inline .formatly-adv-btn:hover,
 [data-theme="dark"] .formatly-toolbar-inline .formatly-adv-btn:hover {
-  background: #4b5563;
+  background: #4b5563 !important;
 }
 .formatly-open-btn {
   position: fixed;
@@ -1474,9 +1474,10 @@ body.dark .formatly-toolbar-inline .formatly-adv-btn:hover,
   background: #f3f6fd;
   color: #2563eb;
 }
-.formatly-toolbar-inline .formatly-adv-btn {
-  background: #e5e7eb;
-  border: none;
+.formatly-toolbar-inline .formatly-adv-btn,
+.formatly-toolbar-inline button.formatly-adv-btn {
+  background: #e5e7eb !important;
+  border: none !important;
   border-radius: 6px;
   padding: 4px 8px;
   margin-left: 16px;
@@ -1486,14 +1487,16 @@ body.dark .formatly-toolbar-inline .formatly-adv-btn:hover,
   transition: background 0.15s;
   cursor: pointer;
 }
-.formatly-toolbar-inline .formatly-adv-btn:hover {
-  background: #d1d5db;
+.formatly-toolbar-inline .formatly-adv-btn:hover,
+.formatly-toolbar-inline button.formatly-adv-btn:hover {
+  background: #d1d5db !important;
 }
 .formatly-toolbar-inline .formatly-adv-btn svg {
   display: block;
 }
-.formatly-toolbar-inline .formatly-adv-btn svg rect {
-  fill: #2563eb;
+.formatly-toolbar-inline .formatly-adv-btn svg rect,
+.formatly-toolbar-inline button.formatly-adv-btn svg rect {
+  fill: #2563eb !important;
 }
 .formatly-modal {
   position: fixed;
