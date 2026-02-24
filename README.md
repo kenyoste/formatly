@@ -130,18 +130,3 @@ Lightweight. Fast. Elegant. That’s Formatly.
 yaml
 Kopyala
 Düzenle
-
----
-
-## ✅ Summary
-
-This `README.md` now:
-
-- Clearly communicates what Formatly is and who it's for  
-- Explains how to use it with **just one line**  
-- Covers dark mode, demo, customization, advanced usage  
-- Is styled like a real-world open-source project README  
-- Is fully professional and ready to be public-facing
-
-
-
