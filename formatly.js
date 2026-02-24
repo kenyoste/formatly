@@ -645,6 +645,8 @@
     advBtn.type = 'button';
     advBtn.className = 'formatly-adv-btn';
     advBtn.title = 'Tam Ekran Düzenle';
+    advBtn.style.backgroundColor = '#ffffff'; 
+    advBtn.style.border = '1px solid #e2e8f0'; // Belirgin olması için hafif gri kenarlık
    advBtn.innerHTML = `<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect x="3" y="3" width="6" height="2" rx="1" fill="#2563eb"/>
       <rect x="3" y="3" width="2" height="6" rx="1" fill="#2563eb"/>
