@@ -645,17 +645,7 @@
     advBtn.type = 'button';
     advBtn.className = 'formatly-adv-btn';
     advBtn.title = 'Tam Ekran Düzenle';
-     advBtn.style.setProperty('background-color', '#ffffff', 'important');
-   advBtn.innerHTML = `<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="3" y="3" width="6" height="2" rx="1" fill="#2563eb"/>
-      <rect x="3" y="3" width="2" height="6" rx="1" fill="#2563eb"/>
-      <rect x="13" y="3" width="6" height="2" rx="1" fill="#2563eb"/>
-      <rect x="17" y="3" width="2" height="6" rx="1" fill="#2563eb"/>
-      <rect x="3" y="17" width="6" height="2" rx="1" fill="#2563eb"/>
-      <rect x="3" y="13" width="2" height="6" rx="1" fill="#2563eb"/>
-      <rect x="13" y="17" width="6" height="2" rx="1" fill="#2563eb"/>
-      <rect x="17" y="13" width="2" height="6" rx="1" fill="#2563eb"/>
-    </svg>`;
+    advBtn.innerHTML = `<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="6" height="2" rx="1" fill="#2563eb"/><rect x="3" y="3" width="2" height="6" rx="1" fill="#2563eb"/><rect x="13" y="3" width="6" height="2" rx="1" fill="#2563eb"/><rect x="17" y="3" width="2" height="6" rx="1" fill="#2563eb"/><rect x="3" y="17" width="6" height="2" rx="1" fill="#2563eb"/><rect x="3" y="13" width="2" height="6" rx="1" fill="#2563eb"/><rect x="13" y="17" width="6" height="2" rx="1" fill="#2563eb"/><rect x="17" y="13" width="2" height="6" rx="1" fill="#2563eb"/></svg>`;
     advBtn.onclick = function(e) {
       e.stopPropagation();
       toolbarDiv.remove();
@@ -1135,13 +1125,13 @@ body.dark .formatly-toolbar-inline button:hover,
 html.dark .formatly-toolbar-inline .formatly-adv-btn,
 body.dark .formatly-toolbar-inline .formatly-adv-btn,
 [data-theme="dark"] .formatly-toolbar-inline .formatly-adv-btn {
-  background: #2563eb;
-  color: #fff;
+  background: #374151;
+  color: #60a5fa;
 }
 html.dark .formatly-toolbar-inline .formatly-adv-btn:hover,
 body.dark .formatly-toolbar-inline .formatly-adv-btn:hover,
 [data-theme="dark"] .formatly-toolbar-inline .formatly-adv-btn:hover {
-  background: #1746a2;
+  background: #4b5563;
 }
 .formatly-open-btn {
   position: fixed;
@@ -1485,8 +1475,7 @@ body.dark .formatly-toolbar-inline .formatly-adv-btn:hover,
   color: #2563eb;
 }
 .formatly-toolbar-inline .formatly-adv-btn {
-  background: #2563eb;
-  color: #fff;
+  background: #e5e7eb;
   border: none;
   border-radius: 6px;
   padding: 4px 8px;
@@ -1498,10 +1487,13 @@ body.dark .formatly-toolbar-inline .formatly-adv-btn:hover,
   cursor: pointer;
 }
 .formatly-toolbar-inline .formatly-adv-btn:hover {
-  background: #1746a2;
+  background: #d1d5db;
 }
 .formatly-toolbar-inline .formatly-adv-btn svg {
   display: block;
+}
+.formatly-toolbar-inline .formatly-adv-btn svg rect {
+  fill: #2563eb;
 }
 .formatly-modal {
   position: fixed;
