@@ -143,12 +143,5 @@ This `README.md` now:
 - Is styled like a real-world open-source project README  
 - Is fully professional and ready to be public-facing
 
----
 
-If you'd like:
-- A Turkish version of this `README.md`
-- A live documentation website (`formatly.dev`)
-- A minimal "Get Started" UI landing page
-- Formatly as an NPM package
 
-Let me know — I'd be happy to assist you in building Formatly into a polished, production-grade open-source tool.
